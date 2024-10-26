@@ -8,7 +8,7 @@ export default function Home() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: "Hi, I'm an AI-Powered IT Knowledge Hub, how can I assist you today?",
+      content: "Hi, I'm an AI-Powered Fashion Diva, how can I assist you today?",
     },
   ]);
   const [message, setMessage] = useState('');
@@ -87,7 +87,8 @@ export default function Home() {
               justifyContent={message.role === 'assistant' ? 'flex-start' : 'flex-end'}
             >
               <Box
-                bgcolor={message.role === 'assistant' ? 'primary.main' : 'secondary.main'}
+                
+                bgcolor={message.role === 'assistant' ? '#DE3163	' : '#FAA0A0'}
                 color="white"
                 borderRadius={16}
                 p={3}
@@ -104,7 +105,8 @@ export default function Home() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <Button variant="contained" onClick={sendMessage}>Send</Button> {/* Added onClick handler */}
+          <Button variant="contained" onClick={sendMessage} sx={{ backgroundColor: '#DE3163', color: 'white', '&:hover': { backgroundColor: '#FFC0CB' } }} >Send</Button> {/* Added onClick handler */}
+   
         </Stack>
       </Stack>
     </Box>
